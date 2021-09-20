@@ -14,7 +14,16 @@ data class ShopCardDto(
 fun ShopCardDto.toShopCard(): ShopCard {
     val items = mutableListOf<Item>()
     for (item in this.items) {
-        items.add(item)
+        items.add(
+            Item(
+                quantity = item.quantity,
+                price =item.payablePrice.title,
+                currencyPrice =item.payablePrice.currency,
+                colorPrice =item.payablePrice.color,
+                productName =item.product.title,
+                productImageURL =item.product.image.url,
+            )
+        )
     }
 
     return ShopCard(

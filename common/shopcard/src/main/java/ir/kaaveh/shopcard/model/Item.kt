@@ -2,6 +2,9 @@ package ir.kaaveh.shopcard.model
 
 data class Item(
     val quantity: Int,
-    val payablePrice: PayablePrice,
-    val product: Product,
+    val price: String,
+    val currencyPrice: String,
+    val colorPrice: String,
+    val productName: String,
+    val productImageURL: String,
 )
