@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android.defaultConfig.javaCompileOptions {
+    annotationProcessorOptions {
+        arguments = [
+                "room.schemaLocation": "$projectDir/schemas".toString(),
+                "room.incremental"   : "true"
+        ]
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$library.kotlin"
+
+    implementation "com.google.dagger:dagger:$library.dagger"
+    kapt "com.google.dagger:dagger-compiler:$library.dagger"
+
+    implementation project(":library:lifecycle")
+    implementation project(":library:mapper")
+    implementation project(":library:datasource")
+    implementation project(':library:thread')
+    implementation project(':library:dependencyinjection')
+    implementation project(':library:androidcore')
+    implementation project(':library:functional')
+    implementation project(':library:androiddagger')
+
+}
