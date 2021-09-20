@@ -31,3 +31,4 @@ include ':library:translation',
 
 rootProject.name = 'Tedu'
 include ':common:shopcard'
+include ':feature:shopbascket'
