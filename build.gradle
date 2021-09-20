@@ -1,5 +1,8 @@
 buildscript {
     apply from: "$rootDir/buildScript/versionManager.gradle"
+    ext {
+        compose_version = '1.0.1'
+    }
     repositories {
         google()
         jcenter()
