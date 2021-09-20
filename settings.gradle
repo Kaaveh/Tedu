@@ -30,3 +30,4 @@ include ':library:translation',
         ':library:networking'
 
 rootProject.name = 'Tedu'
+include ':common:shopcarditem'
