@@ -32,7 +32,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupBottomNavigationView() {
         bottomNavigationView.setupWithNavController(
-            listOf(R.navigation.navigation_todolist, R.navigation.navigation_settings),
+            listOf(
+                R.navigation.navigation_todolist,
+                R.navigation.navigation_settings,
+                R.navigation.navigation_card
+            ),
             supportFragmentManager,
             R.id.fragmentContainer,
             intent

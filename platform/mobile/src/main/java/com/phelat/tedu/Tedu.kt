@@ -9,6 +9,7 @@ import com.phelat.tedu.backup.di.builder.BackupComponentBuilder
 import com.phelat.tedu.contributors.di.builder.ContributorsComponentBuilder
 import com.phelat.tedu.settings.di.builder.SettingsComponentBuilder
 import com.phelat.tedu.todolist.di.builder.TodoListComponentBuilder
+import ir.kaaveh.cart.di.builder.CardComponentBuilder
 
 class Tedu : DaggerAndroidApplication() {
 
@@ -20,6 +21,7 @@ class Tedu : DaggerAndroidApplication() {
         installFeature(SettingsComponentBuilder)
         installFeature(BackupComponentBuilder)
         installFeature(ContributorsComponentBuilder)
+        installFeature(CardComponentBuilder)
         runStartupTasks(::printMeasures)
     }
 
