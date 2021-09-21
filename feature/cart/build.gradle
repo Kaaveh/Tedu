@@ -68,4 +68,6 @@ dependencies {
     implementation project(":library:androiddagger")
     implementation project(":library:androidcore")
     implementation project(":library:androidresource")
+    implementation project(":library:networking")
+    implementation project(":library:thread")
 }
