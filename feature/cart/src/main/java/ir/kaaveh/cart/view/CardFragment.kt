@@ -30,7 +30,11 @@ class CardFragment : Fragment(R.layout.fragment_card) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.shopCard.observe(viewLifecycleOwner) { shopCard ->
-            binding.txtShopCard.text = shopCard.toString()
+            binding.apply {
+                txtShopName.text = shopCard.shopName
+                txtCurrency.text = shopCard.currency
+                txtAllPrice.text = shopCard.allPrice
+            }
         }
     }
 }
