@@ -66,4 +66,6 @@ dependencies {
     implementation project(":library:lifecycle")
     implementation project(":library:dependencyinjection")
     implementation project(":library:androiddagger")
+    implementation project(":library:androidcore")
+    implementation project(":library:androidresource")
 }
