@@ -34,6 +34,7 @@ class CardFragment : Fragment(R.layout.fragment_card) {
                 txtShopName.text = shopCard.shopName
                 txtCurrency.text = shopCard.currency
                 txtAllPrice.text = shopCard.allPrice
+                recyclerView.text = shopCard.items.toString()
             }
         }
     }
