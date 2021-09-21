@@ -1,7 +1,7 @@
 package ir.kaaveh.cart.repository
 
-import ir.kaaveh.cart.response.ShopCardDto
+import ir.kaaveh.cart.entity.ShopCard
 
 interface ShopCardRepository {
-    suspend fun getShopCard(): ShopCardDto
+    suspend fun getShopCard(): ShopCard
 }

@@ -1,11 +1,12 @@
 package ir.kaaveh.cart.repository
 
 import ir.kaaveh.cart.api.RemoteAPI
-import ir.kaaveh.cart.response.ShopCardDto
+import ir.kaaveh.cart.entity.ShopCard
+import ir.kaaveh.cart.response.toShopCard
 import javax.inject.Inject
 
 class ShopCardRepositoryImpl @Inject constructor(
     private val api: RemoteAPI
-): ShopCardRepository {
-    override suspend fun getShopCard(): ShopCardDto = api.getShopCard()
+) : ShopCardRepository {
+    override suspend fun getShopCard(): ShopCard = api.getShopCard().toShopCard()
 }
